@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How are you feeling?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --peach: #f4a261;
+      --peach-dark: #e76f51;
+      --cream: #fff4e6;
+      --brown: #6B2E1F;
+      --teal: #a8d5ba;
+      --teal-dark: #4B7765;
+      --sky: #fbd28b;
+      --sky-light: #fff2cc;
+      --text: #3c1f1f;
+      --text-light: #a85d20;
+    }
+
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background-color: var(--sky);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      font-weight: 600;
+      color: var(--peach-dark);
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .question-box {
+      background-color: var(--sky-light);
+      padding: 15px;
+      border-radius: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .feelings-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .feeling-btn {
+      background-color: var(--cream);
+      border: none;
+      border-radius: 20px;
+      width: 100px;
+      height: 80px;
+      font-size: 24px;
+      text-align: center;
+      padding-top: 10px;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.1s ease-in-out;
+    }
+
+    .feeling-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .form-floating {
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      border-radius: 15px;
+      border: 2px solid var(--peach);
+      padding: 10px;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    .save-btn {
+      background-color: var(--teal-dark);
+      color: var(--cream);
+      border: none;
+      padding: 12px 40px;
+      border-radius: 30px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .save-btn:hover {
+      background-color: var(--brown);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Dear me,</h2>
+
+    <div class="question-box">
+      <h4>How are you feeling right now?</h4>
+    </div>
+
+    <div class="feelings-grid">
+      <button class="feeling-btn">😌<br>Calm</button>
+      <button class="feeling-btn">😐<br>Okay</button>
+      <button class="feeling-btn">😔<br>Sad</button>
+      <button class="feeling-btn">😊<br>Happy</button>
+      <button class="feeling-btn">😨<br>Scared</button>
+      <button class="feeling-btn">🤩<br>Excited</button>
+    </div>
+
+    <div class="form-floating">
+      <label for="feeling-reason">Tell us what made you feel that way…</label>
+      <textarea id="feeling-reason" placeholder="Write here..."></textarea>
+    </div>
+
+    <div class="text-center">
+      <button class="save-btn">Save</button>
+    </div>
+  </div>
+</body>
+</html>

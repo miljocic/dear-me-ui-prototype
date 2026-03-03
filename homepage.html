@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dear Me - Mental Wellness Companion</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    :root {
+  /* Deep warm peach tones */
+  --peach: #F4A261;         /* stronger peach */
+  --peach-dark: #E76F51;    /* rich burnt peach/coral */
+  --cream: #FFF4E6;         /* buttery warm cream */
+  --brown: #6B2E1F;         /* deep cozy brown */
+
+  /* Warm teal/greenish accent */
+  --teal: #A8D5BA;          /* muted warm mint */
+  --teal-dark: #4B7765;
+
+  /* Soft golden sky */
+  --sky: #FBD28B;           /* golden glow */
+  --sky-light: #FFF2CC;     /* pale warm yellow */
+
+  /* Text */
+  --text: #3C1F1F;          /* soft dark reddish-brown */
+  --text-light: #A85D20;    /* warm amber */
+}
+
+
+    
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background: linear-gradient(to bottom, var(--cream), var(--sky-light));
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, var(--peach), var(--peach-dark));
+      padding: 25px 20px;
+      border-radius: 0 0 30px 30px;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .nav-btns {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 25px 0;
+      flex-wrap: wrap;
+    }
+    
+    .nav-btns .btn {
+      border-radius: 50px;
+      padding: 12px 24px;
+      font-weight: 500;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      min-width: 120px;
+    }
+    
+    .card-custom {
+      background: linear-gradient(to bottom right, white, var(--sky-light));
+      border: none;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      width: 100%;
+      max-width: 600px;
+      margin: 20px 0;
+      text-align: center;
+      border: 1px solid rgba(73, 198, 251, 0.2);
+    }
+    
+    .quote {
+      font-style: italic;
+      color: var(--peach-dark);
+      font-weight: 500;
+      margin-top: 15px;
+      display: block;
+    }
+    
+    .mascot-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 25px 0;
+    }
+    
+    .mascot-img {
+      max-width: 250px;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.1));
+    }
+    
+    .action-btns {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 25px 0;
+      flex-wrap: wrap;
+    }
+    
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(to right, var(--peach), var(--teal));
+      padding: 15px;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+      gap: 25px;
+    }
+    
+    /* Button styles */
+    .btn-primary {
+      background-color: var(--peach);
+      color: white;
+    }
+    
+    .btn-secondary {
+      background-color: var(--teal);
+      color: white;
+    }
+    
+    .customize-btn {
+      background-color: white;
+      color: var(--peach-dark);
+      border: 2px solid var(--peach);
+      font-weight: 600;
+      margin-top: 15px;
+    }
+    
+    /* Hover effects */
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    .customize-btn:hover {
+      background-color: var(--peach);
+      color: white;
+    }
+    
+    .footer-icons i {
+      font-size: 24px;
+      color: white;
+      transition: all 0.3s ease;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .footer-icons i:hover {
+      color: var(--sky-light);
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">Dear me,</div>
+
+  <div class="main-content">
+    <div class="nav-btns">
+      <button class="btn btn-primary">
+        <i class="bi bi-rainbow"></i> Meditate
+      </button>
+      <button class="btn btn-secondary">
+        <i class="bi bi-cloud-fog"></i> Breathe
+      </button>
+      <button class="btn btn-primary">
+        <i class="bi bi-journal-text"></i> Journal
+      </button>
+    </div>
+
+    <div class="card-custom">
+      <p>Your pocket helper for tracking mental health and helping you gain and maintain positive habits.</p>
+      <span class="quote">"Big things often have small beginnings!"</span>
+    </div>
+
+    <div class="mascot-container">
+      <img src="assets/maskota.png" alt="Mascot" class="mascot-img">
+      <button class="btn customize-btn">
+        <i class="bi bi-sliders"></i> Customize
+      </button>
+    </div>
+
+    <div class="action-btns">
+      <button class="btn btn-secondary">
+        <i class="bi bi-bullseye"></i> Goals
+      </button>
+      <button class="btn btn-primary">
+        <i class="bi bi-emoji-smile"></i> Calm me
+      </button>
+    </div>
+  </div>
+
+  <div class="footer-icons">
+    <i class="bi bi-person-circle"></i>
+    <i class="bi bi-calendar-event"></i>
+    <i class="bi bi-bar-chart"></i>
+    <i class="bi bi-people"></i>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

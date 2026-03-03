@@ -1,0 +1,170 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fff4e6;
+      --card: #fbd28b;
+      --text: #3c1f1f;
+      --accent: #f4a261;
+      --button: #e76f51;
+    }
+
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+      color: var(--text);
+    }
+
+    .header {
+      background-color: var(--accent);
+      padding: 16px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .message {
+      background-color: var(--card);
+      border-radius: 20px;
+      padding: 15px;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .message-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .reply-btn {
+      background-color: var(--button);
+      color: white;
+      border: none;
+      border-radius: 15px;
+      padding: 6px 16px;
+      font-size: 14px;
+      margin-top: 10px;
+      cursor: pointer;
+      float: right;
+    }
+
+    .quote-img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .new-post {
+      margin-top: 40px;
+    }
+
+    .new-post input,
+    .new-post textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 15px;
+      border: 2px solid var(--accent);
+      margin-bottom: 10px;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .new-post button {
+      background-color: var(--button);
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">Community</div>
+
+  <div class="container">
+    <div class="message-row">
+      <img src="https://i.imgur.com/8Km9tLL.png" class="avatar" alt="user1" />
+      <div class="message">
+        <p>Today I’m feeling hopeless and depressed.</p>
+        <button class="reply-btn">Reply</button>
+      </div>
+    </div>
+
+    <div class="message-row">
+      <img src="https://i.imgur.com/6vOahbP.png" class="avatar" alt="user2" />
+      <div class="message">
+        <p>Nature helps me relax.</p>
+        <button class="reply-btn">Reply</button>
+      </div>
+    </div>
+
+    <div class="message-row">
+      <img src="https://i.imgur.com/8Km9tLL.png" class="avatar" alt="user3" />
+      <div class="message">
+        <img src="https://picsum.photos/id/1015/400/250" class="quote-img" alt="Quote image" />
+        <button class="reply-btn">Reply</button>
+      </div>
+    </div>
+
+    <div class="new-post">
+      <h2>💬 Leave a message</h2>
+      <input type="text" placeholder="Your name or @handle" />
+      <textarea rows="3" placeholder="Your message..."></textarea>
+      <button>Post</button>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.reply-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Reply button clicked!');
+      });
+    });
+
+    document.querySelector('.new-post button').addEventListener('click', () => {
+      const name = document.querySelector('.new-post input').value.trim();
+      const message = document.querySelector('.new-post textarea').value.trim();
+      if (!name || !message) {
+        alert('Please enter both name and message.');
+        return;
+      }
+      alert(`Posting message from ${name}: ${message}`);
+      // Add your actual post logic here (append message or send to backend)
+    });
+  </script>
+
+</body>
+</html>
